@@ -1,10 +1,13 @@
 import operator
 
+from crawling_1.crawler import Crawling
 from collections import Counter
-from main import crawling
 
 
 def indexing():
+    db_address = input('enter the absolute path of where you want to locate pages: ')
+    crawling = Crawling(db_address)
+    crawling.crawl()
     index = {}
     for doc_name, doc_content in crawling.data.items():
         words = doc_content.split()
