@@ -1,8 +1,5 @@
-from indexing_1.index import indexing
-
-
-def search(word):
-    index = indexing()
+def search(word, index):
+    # print(index)
     if word in index:
         return index[word].items()
     else:
