@@ -7,9 +7,7 @@ from collections import Counter
 
 def index_words():
     paging = PagingBook()
-    number_of_lines = input('lines in a page: ')
-    number_of_pages = input('number of pages: ')
-    paging.page_write(number_of_lines, number_of_pages)
+    paging.page_write()
     crl = Crawling(paging.pages_address)
     crl.crawl()
     index = {}
